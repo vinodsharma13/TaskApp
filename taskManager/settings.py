@@ -10,8 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+import django-heroku
 import os
 import environ
+
+
 
 
 
@@ -131,3 +134,5 @@ STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'todolist'
 LOGIN_URL = 'login'
+
+django-heroku.settings(locals())
